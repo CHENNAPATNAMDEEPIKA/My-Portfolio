@@ -1,0 +1,258 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+.hero-image {
+  height: 100vh;
+  background: url('header-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-content img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  margin: 1.5rem 0;
+}
+
+.tab-link {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e2e8f0;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.tab-link.active {
+  background-color: #38bdf8;
+  color: white;
+}
+
+.tab-content {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Internships Section */
+#internships {
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.internship-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  width: 300px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #cbd5e1;
+}
+
+.details {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  padding: 1rem;
+  border-top: 1px solid #cbd5e1;
+  margin-top: 1rem;
+  display: none;
+  font-size: 0.9rem;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.card:hover .details {
+  display: block;
+}
+
+/* Projects Section */
+#projects {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project {
+  background-color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 280px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: scale(1.03);
+  background-color: #cbd5e1;
+}
+
+.project h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+#contact a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-container, .internship-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

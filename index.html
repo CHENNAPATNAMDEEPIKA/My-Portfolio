@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepika Chennapatnam | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="home">
+  <nav class="navbar">
+    <h1 class="logo">Deepika Chennapatnam</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-image">
+    <div class="hero-overlay">
+      <img src="C:\Users\chenn\Downloads\photo (4).jpg" alt="Deepika Chennapatnam" class="hero-profile">
+      
+      <h2>Hi, I'm Deepika Chennapatnam</h2>
+      <p>Full Stack Developer | Java | React | Problem Solver</p>
+    </div>
+  </div>
+</header>
+
+  <section id="about" class="about">
+    <div class="about-content">
+      <img src="C:\Users\chenn\Downloads\photo (4).jpg" alt="Deepika Chennapatnam">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I am Deepika Chennapatnam, a passionate full stack developer with strong technical knowledge and excellent communication skills.</p>
+        <div class="tabs">
+          <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+          <button class="tab-link" onclick="openTab(event, 'education')">Education</button>
+        </div>
+        <div id="skills" class="tab-content">
+          <h3>Programming Languages:</h3>
+          <p>Java, Python, JavaScript</p>
+          <h3>Frontend Technologies:</h3>
+          <p>HTML, CSS, React, Node.js</p>
+          <h3>Development Tools:</h3>
+          <p>Eclipse, Visual Studio, Cursor</p>
+          <h3>Databases:</h3>
+          <p>SQL, MySQL</p>
+        </div>
+        <div id="education" class="tab-content" style="display:none">
+          <h3>Education</h3>
+          <ul>
+            <li>MCA, 2025 - Vikrama Simhapuri University - 82%</li>
+            <li>B.Sc, 2023 - Gayatri Degree & PG College, Tirupati - 91%</li>
+            <li>Intermediate, 2020 - Sri Chaitanya Junior College, Tirupati - 92%</li>
+            <li>10th, 2018 - ZPP High School, Nelluballi - 88%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="internships">
+  <h2>Internships</h2>
+  <div class="internship-container">
+
+    <div class="card">
+      <div class="internship">
+        <h3>Salesforce Developer - Salesforce</h3>
+        <p>Worked on a Vehicle Management System project using Salesforce.</p>
+      </div>
+      <div class="details">
+        <p>✅ Duration: 4 months<br>✅ Skills: Salesforce Platform, Apex, Cloud CRM<br>✅ Learned: Vehicle data modeling, automation tools, Lightning components</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="internship">
+        <h3>Python Developer - AK Technologies, Hyderabad</h3>
+        <p>Project: Securing the digital world from black hat hackers.</p>
+      </div>
+      <div class="details">
+        <p>✅ Duration: 3 months<br>✅ Skills: Python, Cybersecurity, Data Encryption<br>✅ Learned: Threat analysis, script automation, ethical hacking basics</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+      <div class="project">
+        <h3>Bank Management System (Java)</h3>
+        <p>Allows withdrawal, deposit, and shows transaction completion messages.</p>
+      </div>
+      <div class="project">
+        <h3>Course Registration (HTML, CSS, JS)</h3>
+        <p>Enables users to register for courses interactively.</p>
+      </div>
+      <div class="project">
+        <h3>E-Commerce Website (React)</h3>
+        <p>Users can add products to cart and place orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:chennapatnamdeepika@gmail.com">chennapatnamdeepika@gmail.com</a></p>
+    <p>Phone: 7207110419</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/deepika-chennapatnam" target="_blank">Deepika's LinkedIn</a></p>
+    <p>GitHub: <a href="https://github.com/CHENNAPATNAMDEEPIKA" target="_blank">GitHub Profile</a></p>
+  </section>
+
+  <script>
+    function openTab(evt, tabName) {
+      let i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>
